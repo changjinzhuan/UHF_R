@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.handheld.uhfr"
+    android:versionCode="3"
+    android:versionName="3.1"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/uhf_r"
+        android:label="@string/app_name"
+        android:largeHeap="true">
+        <activity
+            android:name="com.handheld.uhfrdemo.RfidLockActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.handheld.uhfrdemo.MainActivity"></activity>
+        <!--activity
+           android:name="com.handheld.uhfr.Main_Lock_Activity"
+           android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+       </activity-->
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.handheld.uhfr"
+        minSdkVersion 19
+        targetSdkVersion 28
+        ndk {
+            abiFilters "armeabi", "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation files('libs/uhf_r_v1.0.jar')
+    implementation files('libs/hf_psam1.3.jar')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+}
